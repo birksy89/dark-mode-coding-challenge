@@ -8,7 +8,7 @@ function App() {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
   return (
-    <div className={`app ${isDarkMode ? "dark-mode" : ""}`}>
+    <div className="app">
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
