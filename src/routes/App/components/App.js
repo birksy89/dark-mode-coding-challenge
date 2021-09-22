@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from "../../../common/containers/App";
 import "../styles/_app.scss";
 
@@ -8,7 +8,7 @@ function App() {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
   return (
-    <div className="app">
+    <div className={`app ${isDarkMode ? "dark-mode" : ""}`}>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
@@ -19,7 +19,9 @@ function App() {
           className="app__dark-mode-btn icon level-right"
           onClick={() => setIsDarkMode(!isDarkMode)}
         >
-          <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+          <FontAwesomeIcon icon={faMoon} />
+          {/* Could also change the icon */}
+          {/* <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} /> */}
         </button>
       </div>
 

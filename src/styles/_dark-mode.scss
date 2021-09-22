@@ -1,39 +1,43 @@
 .dark-mode {
   background: #121212;
 
+  .app__dark-mode-btn {
+    color: #fea400;
+  }
+
   p {
     color: white;
     opacity: 87%;
   }
 
   .title {
-    color: #BB86FC;
+    color: #bb86fc;
   }
 
   .subtitle {
-    color: #03DAC6;
+    color: #03dac6;
   }
 
   .is-primary {
-    background-color: #BB86FC;
+    background-color: #bb86fc;
     color: black;
   }
 
   .is-primary:hover,
   .is-primary:focus {
-    background-color: #BB86FC;
+    background-color: #bb86fc;
     opacity: 75%;
     color: black;
   }
 
   .is-link {
-    background-color: #03DAC6;
+    background-color: #03dac6;
     color: black;
   }
 
   .is-link:hover,
   .is-link:focus {
-    background-color: #03DAC6;
+    background-color: #03dac6;
     opacity: 75%;
     color: black;
   }
