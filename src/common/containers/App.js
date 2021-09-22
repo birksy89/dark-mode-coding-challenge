@@ -1,5 +1,13 @@
-import React from "react";
+import React, { createContext, useState } from "react";
+
+export const ThemeContext = createContext("light");
 
 export default function App({ children }) {
-  return <React.Fragment>{children}</React.Fragment>;
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  return (
+    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
